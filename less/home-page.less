@@ -1,8 +1,14 @@
 // Home Content
 
-.home {
+div.container {
+  width:90%
+  @phone{
+    width:90%;
+    .centered-phone();
+  }
+}
 
-  .intro {
+  header.intro {
 
     h2 {
       padding: 15px;
@@ -11,7 +17,11 @@
     p {
       padding:0 15px;
     }
-  
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
   }
 
   .space-images {
@@ -19,11 +29,22 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @phone{
+      width:100%;
+      img.sky{
+        display:hidden;}
+      img.launch{
+        display:hidden;}
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
-      height: 100%;
+      height: auto;
+      @phone {
+        width:100%;
+      }
     }
   }
 
@@ -39,15 +60,22 @@
     }
   }
 
-  .walk {
-    margin-top: 60px;
+  section.walk {
+    width: 80%;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    // padding: 5px 5px;
+    .centered();
+    @phone{
+      width:100%;
+      .centered();
+      flex-direction:column-reverse;
+    }
 
     .walk-text {
       width: 50%;
+      @phone{
+        width:100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -56,20 +84,32 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
-      }
     }
 
     .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
     }
+
+  .btn{
+      display: flex;
+      .centered();
+      background-color: @btn-bg-color;
+      @phone{
+        width: 90%;
+        .centered-phone();
+      }
+      height: 20px;
+      font-size: 2rem;
+      font-family:@text;
+      fony-style:bold;
+      border-radius: 10px;
+      @phone{
+        width: 90%;
+        height: 20px;
+        font-size: 1.6rem;
+        fony-style:none;
+      }
   }
-}// home

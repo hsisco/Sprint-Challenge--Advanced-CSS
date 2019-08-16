@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.centered-desktop {
+.centered {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,6 +156,10 @@ h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
 }
+h1 {
+  font-size: 3.8rem;
+  font-style: bold;
+}
 h2 {
   font-size: 3.2rem;
 }
@@ -171,23 +175,44 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-.container {
+header.navigation {
+  width: 100%;
+  height: 10%;
+  padding: 10px 0;
+  background-color: #F6F6F6;
+  color: #454A59;
+  top: 0;
   margin: 0 auto;
-  width: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-nav {
-  padding: 20px 0;
-  background-color: white;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 999;
+  flex-direction: column;
   border: 1px solid blue;
+}
+@phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header.navigation h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+header.navigation nav {
+  width: 80%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}
+header.navigation nav a {
+  justify-content: space-between;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 footer {
   color: #22283B;
@@ -199,53 +224,84 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.home .intro h2 {
+@phone {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+div.container header.intro h2 {
   padding: 15px;
 }
-.home .intro p {
+div.container header.intro p {
   padding: 0 15px;
 }
-.home .space-images {
+div.container header.intro img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+div.container .space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.home .space-images img {
+@phone {
+  width: 100%;
+  img.sky {
+    display: hidden;
+  }
+  img.launch {
+    display: hidden;
+  }
+}
+div.container .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
-  height: 100%;
+  height: auto;
 }
-.home .visit-planets {
+@phone {
+  width: 100%;
+}
+div.container .visit-planets {
   padding: 15px;
 }
-.home .visit-planets h3 {
+div.container .visit-planets h3 {
   margin-top: 11px;
 }
-.home .visit-planets p {
+div.container .visit-planets p {
   margin-top: 13px;
 }
-.home .walk {
+div.container .walk {
+  width: 80%;
   margin-top: 60px;
   border-top: 1px solid #dee2e6;
-  padding: 50px 60px;
+  padding: 50px 0;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
-.home .walk .walk-text {
+@phone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div.container .walk .walk-text {
   width: 50%;
 }
-.home .walk .walk-text h3 {
+div.container .walk .walk-text h3 {
   margin-bottom: 10px;
 }
-.home .walk .walk-text p {
+div.container .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-img {
+div.container .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk .walk-img img {
+div.container .walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
