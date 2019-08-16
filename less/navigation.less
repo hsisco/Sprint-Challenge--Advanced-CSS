@@ -9,7 +9,7 @@ header.navigation{
     .centered();
     flex-direction: column;
     border:1px solid blue;
-    @phone{
+    @media @phone{
         .centered-phone();
     }
 
@@ -18,15 +18,17 @@ header.navigation{
         padding:1%;
     }
     nav{
-        width:80%;
-        padding:1%;
+        width:100%;
+        padding:1% 10%;
         .centered();
         border:1px solid blue;
         a{
             justify-content: space-between;
             font-size: 1.2rem;
             line-height: 1.4;
-            padding:1%;
+            padding:10%;
+            border:1px solid blue;
+
         }
     }
 }

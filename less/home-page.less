@@ -2,10 +2,9 @@
 
 div.container {
   width:90%
-  @phone{
+  @media @phone{
     width:90%;
-    .centered-phone();
-  }
+    .centered-phone();}
 }
 
   header.intro {
@@ -29,7 +28,7 @@ div.container {
     flex-wrap: wrap;
     width: 100%;
 
-    @phone{
+    @media @phone{
       width:100%;
       img.sky{
         display:hidden;}
@@ -42,7 +41,7 @@ div.container {
       margin: 20px 2.5%;
       border-radius: 20px;
       height: auto;
-      @phone {
+      @media @phone {
         width:100%;
       }
     }
@@ -60,12 +59,11 @@ div.container {
     }
   }
 
-  section.walk {
-    width: 80%;
+  .walk {
     border-top: 1px solid @main-border-color;
-    // padding: 5px 5px;
-    .centered();
-    @phone{
+    padding: 5px 5px;
+    display:flex;
+    @media @phone{
       width:100%;
       .centered();
       flex-direction:column-reverse;
@@ -73,7 +71,7 @@ div.container {
 
     .walk-text {
       width: 50%;
-      @phone{
+      @media @phone{
         width:100%;
       }
 
@@ -82,34 +80,33 @@ div.container {
       }
 
       p {
-        margin-bottom: 26px;
+        margin-bottom: 10px;
       }
     }
 
     .walk-img {
-        width: 100%;
-        height: auto;
+        width: 50%%;
         border-radius: 10px;
+        @media @phone {
+          width:100%;
+        }
       }
     }
 
-  .btn{
+  button{
       display: flex;
       .centered();
       background-color: @btn-bg-color;
-      @phone{
-        width: 90%;
-        .centered-phone();
-      }
       height: 20px;
       font-size: 2rem;
       font-family:@text;
-      fony-style:bold;
+      font-style:bold;
       border-radius: 10px;
-      @phone{
+      @media @phone{
         width: 90%;
         height: 20px;
+        .centered-phone();
         font-size: 1.6rem;
-        fony-style:none;
+        font-style:none;
       }
   }
