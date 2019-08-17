@@ -305,6 +305,7 @@ section.bottom {
 }
 section.bottom div.walk {
   margin: 0 60px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 40px;
